@@ -1,0 +1,16 @@
+# IDE Project files
+.idea
+nbproject
+.project
+.DS_Store
+
+# vim
+*.swp
+# ctags
+tags
+
+/vendor/
+/composer.lock
+/composer.phar
+/composer-setup.php
+
