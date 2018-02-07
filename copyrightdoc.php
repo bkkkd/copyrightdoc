@@ -44,7 +44,7 @@ if(!empty($options['e'])){
 }
 put('ext:'.implode(',', $exts));
 
-$excludes = ['.git','tmp'];
+$excludes = ['/.git/','/tmp/'];
 if(!empty($options['x'])){
     if(is_array($options['x'])){
         $excludes = $options['x'];
@@ -66,8 +66,11 @@ function put($msg=""){
 function help(){
     put('Help message');
     put('------------');
-    put('omniconfig -d /your/path/to [-h]');
-    put('  -d set a new config name.default is DB_DATABASE');
+    put('copyright -d /your/path/to [-h]');
+    put('  -d set source code directory. default is current path');
+    put('  -o set a outfile name. default is project directory name.');
+    put('  -e set a file extension. default: php and tpl');
+    put('  -x set exclude string.default is /.git/ and /tmp/');
     put('  -h this message');
     exit;
 
