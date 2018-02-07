@@ -10,7 +10,11 @@
  */
 
 // 参数内容为生成文件路径 此例中则在当前目录生成example.phar打包程序
-$filename = __DIR__.'/copyrightdoc.phar';
+$path = __DIR__.'/dist';
+$filename = $path.'/copyrightdoc.phar';
+if(!is_dir($path)){
+    mkdir($path,0777);
+}
 if(file_exists($filename)){
     unlink($filename);
 }

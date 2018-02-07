@@ -9,6 +9,7 @@ nbproject
 # ctags
 tags
 
+/dist/
 /vendor/
 /composer.lock
 /composer.phar
