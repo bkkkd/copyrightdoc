@@ -1,4 +1,12 @@
 {
+    "name":"bkkkd/copyrightdoc",
+    "description":"Chinese software copyright source document generation tool.",
+    "homepage":"https://github.com/bkkkd/copyrightdoc",
+    "license":"MIT",
+    "authors":[{
+        "name":"Tim Huang",
+        "homepage":"http://atim.cn"
+    }],
     "require": {
         "phpoffice/phpword": "^0.14.0"
     }
