@@ -24,11 +24,10 @@ if($help){
     help();
 }
 
-$dir = $_SERVER['PWD'];
-if(!empty($options['d'])){
-    $dir = realpath($options['d']);
+if(empty($options['d'])){
+    help();
 }
-
+$dir = realpath($options['d']);
 put('dir:'.$dir);
 
 $exts = ['php','tpl'];
@@ -66,8 +65,8 @@ function put($msg=""){
 function help(){
     put('Help message');
     put('------------');
-    put('copyright -d /your/path/to [-h]');
-    put('  -d set source code directory. default is current path');
+    put('copyright -d /your/path/to [-h] [-e tpl -e php] [-o projectname] [-x /.git/ -x /tmp/]');
+    put('  -d set source code directory. request fill it.');
     put('  -o set a outfile name. default is project directory name.');
     put('  -e set a file extension. default: php and tpl');
     put('  -x set exclude string.default is /.git/ and /tmp/');
